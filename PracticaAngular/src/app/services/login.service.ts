@@ -4,7 +4,7 @@ import { Observable, throwError, Subject } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 import { map } from 'rxjs/operators';
 import { tap } from 'rxjs/operators';
-import { Usuario } from '../models/usuario.model';
+import { Usuario } from '../Models/usuario.model';
 
 import { environment } from '../../environments/environment';
 
