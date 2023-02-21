@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Location } from '@angular/common';
 import { Router } from '@angular/router';
-import { Usuario } from 'src/app/models/usuario.model';
+import { Usuario } from 'src/app/Models/usuario.model';
 import { LoginService } from 'src/app/services/login.service';
 
 @Component({
