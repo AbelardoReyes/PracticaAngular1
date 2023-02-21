@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Injectable } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ChefService } from 'src/app/services/chef.service';
-import { Chef } from 'src/app/models/chef.model';
+import { Chef } from 'src/app/Models/chef.model';
 import { Location } from '@angular/common';
 
 

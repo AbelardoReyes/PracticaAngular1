@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Route, ParamMap } from '@angular/router';
 import { OnInit, OnDestroy } from '@angular/core';
-import { Chef } from 'src/app/models/chef.model';
+import { Chef } from 'src/app/Models/chef.model';
 import { ChefService } from 'src/app/services/chef.service';
 import { Subscription } from 'rxjs';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';

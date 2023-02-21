@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError, Subject } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
-import { Chef } from '../models/chef.model';
+import { Chef } from '../Models/chef.model';
 import { tap } from 'rxjs/operators';
 import { environment } from '../../environments/environment';
 
