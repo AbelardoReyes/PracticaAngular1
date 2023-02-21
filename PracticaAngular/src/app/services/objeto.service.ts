@@ -4,7 +4,7 @@ import { Observable, throwError, Subject } from 'rxjs';
 import { catchError, map, retry } from 'rxjs/operators';
 import { tap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
-import { Objeto } from '../models/objeto.model';
+import { Objeto } from '../Models/objeto.model';
 
 @Injectable({
   providedIn: 'root'
@@ -21,25 +21,25 @@ export class ObjetoService {
   get_refresh$() {
     return this._refresh$;
   }
-  getIMapa(): Observable<Objeto[]> {
+  getIObjeto(): Observable<Objeto[]> {
     return this.http.get<Objeto[]>(this.obtenerObjetos).pipe(retry(3), catchError(this.handleError))
   }
-  addMapa(objeto: Objeto): Observable<Objeto> {
+  addObjeto(objeto: Objeto): Observable<Objeto> {
     return this.http.post<Objeto>(this.crearObjeto, objeto).pipe(catchError(this.handleError)).pipe(tap(() => {
       this._refresh$.next();
     }
     ));
   }
-  getOneMapa(id: number): Observable<Objeto[]> {
+  getOneObjeto(id: number): Observable<Objeto[]> {
     return this.http.get<Objeto[]>(this.obtenerObjeto + id).pipe(retry(3), catchError(this.handleError))
   }
-  updateMapa(objeto: Objeto): Observable<Objeto> {
+  updateObjeto(objeto: Objeto): Observable<Objeto> {
     return this.http.put<Objeto>(this.modificarObjeto + objeto.id, objeto).pipe(catchError(this.handleError)).pipe(tap(() => {
       this._refresh$.next();
     }
     ));
   }
-  deleteMapa(objeto: Objeto): Observable<Objeto[]> {
+  deleteObjeto(objeto: Objeto): Observable<Objeto[]> {
     return this.http.delete<Objeto[]>(this.eliminarObjeto + objeto.id).pipe(retry(3), catchError(this.handleError))
   }
   private handleError(error: HttpErrorResponse) {

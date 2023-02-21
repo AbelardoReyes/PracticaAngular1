@@ -1,1 +1,25 @@
-<p>objeto-delete works!</p>
+<div class="pt-36"></div>
+<div class="shadow-xl pt-10 text-3xl p-5" style="margin: auto; width: 65%">
+  <form [formGroup]="form" (ngSubmit)="OnSubmit(form.value)">
+  <h1 class="text-center">
+    ¿Estas seguro de Eliminar al objeto <br><input type="text" formControlName="nombre" style="border: none; width: 20%;" class="text-3xl">?,Esta accion no se puede
+    deshacer!
+  </h1>
+
+    <input type="number" formControlName="id" hidden>
+
+  <div class="pl-80 pt-5"><button
+      type="submit"
+      class=" text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+    >
+      Eliminar
+    </button>
+    <button
+      type="button"
+      class="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+    >
+      <a routerLink="/objeto" routerLinkActive="active" ariaCurrentWhenActive="page">Regresar</a>
+    </button>
+  </div>
+</form>
+</div>

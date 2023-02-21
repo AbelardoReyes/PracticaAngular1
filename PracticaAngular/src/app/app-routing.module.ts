@@ -19,6 +19,18 @@ import { MapaComponent } from './components/mh/mapa/mapa.component';
 import { LoginComponent } from './components/login/login.component';
 import { UsuarioRegistroComponent } from './components/usuario-registro/usuario-registro.component';
 import { UsuarioCodigoVerificacionComponent } from './components/usuario-codigo-verificacion/usuario-codigo-verificacion.component';
+import { MapaFormComponent } from './components/mh/mapa-form/mapa-form.component';
+import { MapaFormEditComponent } from './components/mh/mapa-form-edit/mapa-form-edit.component';
+import { MapaDeleteComponent } from './components/mh/mapa-delete/mapa-delete.component';
+import { ObjetoComponent } from './components/mh/objeto/objeto.component';
+import { ObjetoFormComponent } from './components/mh/objeto-form/objeto-form.component';
+import { ObjetoFormEditComponent } from './components/mh/objeto-form-edit/objeto-form-edit.component';
+import { ObjetoDeleteComponent } from './components/mh/objeto-delete/objeto-delete.component';
+import { ZonaObjetoComponent } from './components/mh/zona-objeto/zona-objeto.component';
+import { ZonaObjetoFormComponent } from './components/mh/zona-objeto-form/zona-objeto-form.component';
+import { ZonaObjetoFormEditComponent } from './components/mh/zona-objeto-form-edit/zona-objeto-form-edit.component';
+import { ZonaDeleteComponent } from './components/mh/zona-delete/zona-delete.component';
+
 
 const routes: Routes = [
 
@@ -42,6 +54,19 @@ const routes: Routes = [
   { path: 'recetas/delete/:id', component: RecetaDeleteComponent},
 
   { path: 'mapas', component: MapaComponent},
+  { path: 'mapas/create', component: MapaFormComponent},
+  { path: 'mapas/edit/:id', component: MapaFormEditComponent},
+  { path: 'mapas/delete/:id', component: MapaDeleteComponent},
+
+  { path: 'objeto', component: ObjetoComponent},
+  { path: 'objeto/create', component: ObjetoFormComponent},
+  { path: 'objeto/edit/:id', component: ObjetoFormEditComponent},
+  { path: 'objeto/delete/:id', component: ObjetoDeleteComponent},
+
+  { path: 'zonaObjeto', component: ZonaObjetoComponent},
+  { path: 'zonaObjeto/create', component: ZonaObjetoFormComponent},
+  { path: 'zonaObjeto/edit/:id', component: ZonaObjetoFormEditComponent},
+  { path: 'zonaObjeto/delete/:id', component: ZonaDeleteComponent},
 
 
   { path: 'usuarios', component: UsuarioComponent },

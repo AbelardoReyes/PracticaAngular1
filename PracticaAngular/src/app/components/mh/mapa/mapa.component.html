@@ -1,1 +1,65 @@
-<p>mapa works!</p>
+<app-header></app-header>
+<div class="container mx-auto">
+  <div class="grid grid-cols-5 pt-5">
+    <div class="col-span-1" style="width: min-content;">
+      <app-nav-bar></app-nav-bar>
+    </div>
+    <div class="col-start-2 col-end-5">
+      <div class="pt-5 pb-5" style="margin: auto; width: 100%">
+        <h1 class="text-2xl font-bold text-gray-700 dark:text-gray-200">
+          Mapas
+        </h1>
+        <p class="mt-1 text-sm text-gray-500 dark:text-gray-400 pr-80">
+          Lista de Mapas
+        </p>
+        <!-- Modal toggle -->
+        <button class="text-white bg-purple-700 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900" routerLink="/mapa/create" routerLinkActive="active" ariaCurrentWhenActive="page">Nuevo Mapa</button>
+      </div>
+      <div
+        class="relative overflow-x-auto shadow-md"
+        style="width: 100%; margin: auto"
+      >
+        <table class="text-sm text-center text-gray-500 dark:text-gray-400">
+          <thead
+            class="text-xs text-white bg-green-700 dark:bg-gray-800 dark:text-gray-400"
+          >
+            <tr>
+              <th scope="col" class="px-1 py-1">ID</th>
+              <th scope="col" class="px-4 py-1">Nombre</th>
+              <th scope="col" class="px-5 py-1">Descripcion</th>
+              <th scope="col" class="px-5 py-1">Zonas</th>
+
+
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-white dark:bg-gray-800" *ngFor="let m of mapas">
+              <td class="px-1 py-2">{{ m.id }}</td>
+              <td class="px-6 py-2">{{ m.nombre }}</td>
+              <td class="px-7 py-2">{{ m.descripcion }}</td>
+              <td class="px-7 py-2">{{ m.totalZonas }}</td>
+              <td class="px-6 py-2">
+                <a
+                  routerLink="edit/{{ m.id }}"
+                  routerLinkActive="active"
+                  ariaCurrentWhenActive="page"
+                  >Edit</a
+                >
+              </td>
+              <td class="px-6 py-2">
+                <a
+                  routerLink="delete/{{ m.id }}}"
+                  routerLinkActive="active"
+                  ariaCurrentWhenActive="page"
+                  >Delete</a
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>
+
